@@ -13,28 +13,28 @@ require "includes/header.php";
     <section class="acervo">
       <div class="grid-acervo">
         <div class="item-acervo">
-          <img src="/SitedoMuseu/static/imagens/temporaria.png" alt="Ambiente da Caatinga">
+          <img src="/ProjetoMuseu/static/imagens/temporaria.png" alt="Ambiente da Caatinga">
           <div class="info">
             <p class="tag">ambiente</p>
             <h3>Caatinga</h3>
           </div>
         </div>
         <div class="item-acervo">
-          <img src="/SitedoMuseu/static/imagens/temporaria.png" alt="Ambiente do Cerrado">
+          <img src="/ProjetoMuseu/static/imagens/temporaria.png" alt="Ambiente do Cerrado">
           <div class="info">
             <p class="tag">ambiente</p>
             <h3>Cerrado</h3>
           </div>
         </div>
         <div class="item-acervo">
-          <img src="/SitedoMuseu/static/imagens/temporaria.png" alt="Ambiente da Amazônia">
+          <img src="/ProjetoMuseu/static/imagens/temporaria.png" alt="Ambiente da Amazônia">
           <div class="info">
             <p class="tag">ambiente</p>
             <h3>Mata Atântica</h3>
           </div>
         </div>
         <div class="item-acervo">
-          <img src="/SitedoMuseu/static/imagens/temporaria.png" alt="Ambiente Interno do Museu">
+          <img src="/ProjetoMuseu/static/imagens/temporaria.png" alt="Ambiente Interno do Museu">
           <div class="info">
             <p class="tag">ambiente</p>
             <h3>Ecossitema Marinho</h3>
