@@ -33,8 +33,8 @@
             <div class="container d-flex justify-content-center flex-wrap gap-3">
                 <a href="/ProjetoMuseu/index.php" class="nav-link-custom">INÍCIO</a>
                 <a href="/ProjetoMuseu/views/sobre.php" class="nav-link-custom">SOBRE</a>
-                <a href="/ProjetoMuseu/template/visitas.php" class="nav-link-custom">VISITAS</a>
-                <a href="/ProjetoMuseu/template/agendamento.php" class="nav-link-custom">AGENDAMENTO</a>
+                <a href="/ProjetoMuseu/views/visitas.php" class="nav-link-custom">VISITAS</a>
+                <a href="/ProjetoMuseu/views/agendamento.php" class="nav-link-custom">AGENDAMENTO</a>
                 <a href="/ProjetoMuseu/template/contato.html" class="nav-link-custom">CONTATO</a>
             </div>
         </nav>
