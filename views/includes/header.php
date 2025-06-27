@@ -7,6 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/ProjetoMuseu/static/css/main.css">
+
+    <?php if(isset($pagina_css)): ?>
+        <link rel="stylesheet" href="/ProjetoMuseu/static/css/<?php echo $pagina_css; ?>">
+    <?php endif; ?>
+
 </head>
 <body>
     <header class="custom-header">
