@@ -30,7 +30,7 @@ unset($_SESSION['dados']);
                 </div>
             <?php endif; ?>
 
-            <form method="POST" action="/SitedoMuseu/php/validacaoVisita.php">
+            <form method="POST" action="/ProjetoMuseu/static/validaAgendamento.php" method="POST">
                 <div class="campo">
                     <label for="telefone_escola">Telefone de contato</label>
                     <input type="text" name="telefone_escola" id="telefone_escola" placeholder="Ex:(35) 99999-9999"
@@ -125,3 +125,7 @@ unset($_SESSION['dados']);
         </div>
     </div>
 </main>
+
+<?php
+require "includes/footer.php";
+?>
