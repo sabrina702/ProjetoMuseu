@@ -6,14 +6,14 @@
     <title>Museu IFSULDEMINAS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/ProjetoMuseu/static/css/main.css">
 </head>
 <body>
     <header class="custom-header">
         <div class="container py-4">
             <div class="row align-items-center">
                 <div class="col-md-2 text-center text-md-start">
-                    <img src="/ProjetoMuseu/static/assets/logo.png" alt="Logo do Museu" class="logo-museu">
+                    <img src="/ProjetoMuseu/static/imagens/logo.png" alt="Logo do Museu" class="logo-museu">
                 </div>
                 <div class="col-md-10 text-center text-md-start">
                     <h1 class="nome-museu mb-1">Museu de Ciências Naturais José Alencar de Carvalho</h1>
