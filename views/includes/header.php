@@ -35,7 +35,7 @@
                 <a href="/ProjetoMuseu/views/sobre.php" class="nav-link-custom">SOBRE</a>
                 <a href="/ProjetoMuseu/views/visitas.php" class="nav-link-custom">VISITAS</a>
                 <a href="/ProjetoMuseu/views/agendamento.php" class="nav-link-custom">AGENDAMENTO</a>
-                <a href="/ProjetoMuseu/template/contato.html" class="nav-link-custom">CONTATO</a>
+                <a href="/ProjetoMuseu/views/contato.php" class="nav-link-custom">CONTATO</a>
             </div>
         </nav>
     </header>
