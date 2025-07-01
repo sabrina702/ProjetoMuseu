@@ -1,5 +1,5 @@
 <?php
-class Visita
+class AgendamentoModel
 {
     private $pdo;
 

@@ -3,7 +3,7 @@ session_start();
 date_default_timezone_set('America/Sao_Paulo');
 
 require_once __DIR__ . '/../config/conexao.php';
-require_once __DIR__ . '/../models/Visita.php';
+require_once __DIR__ . '/../models/AgendamentoModel.php';
 
 class AgendamentoController
 {
@@ -55,7 +55,7 @@ class AgendamentoController
         }
 
         try {
-            $visita = new Visita($this->pdo);
+            $visita = new AgendamentoModel($this->pdo);
             $id_visitante = $visita->cadastrarVisitante($dados);
             $visita->criarSolicitacao($id_visitante);
 
