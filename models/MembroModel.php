@@ -8,6 +8,12 @@ class Membro
         $this->pdo = $pdo;
     }
 
+    public function listar()
+    {
+        $stmt = $this->pdo->query("SELECT * FROM membro");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function adicionar($dados)
     {
         $sql = "INSERT INTO membro (nome, email, senha, sobre, perfil) 
@@ -22,14 +28,30 @@ class Membro
         ]);
     }
 
-    public function listar()
+    public function buscarPorId($id)
     {
-        $sql = "SELECT * FROM membro";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = $this->pdo->prepare("SELECT * FROM membro WHERE id = :id");
+        $stmt->execute([':id' => $id]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-    
 
-    
+    public function editar($id, $dados)
+    {
+        $sql = "UPDATE membro SET nome=:nome, email=:email, sobre=:sobre, perfil=:perfil WHERE id=:id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([
+            ':nome' => $dados['nome'],
+            ':email' => $dados['email'],
+            ':sobre' => $dados['sobre'],
+            ':perfil' => $dados['perfil'],
+            ':id' => $id
+        ]);
+    }
+
+    public function excluir($id)
+    {
+        $stmt = $this->pdo->prepare("DELETE FROM membro WHERE id = :id");
+        $stmt->execute([':id' => $id]);
+    }
 }
+

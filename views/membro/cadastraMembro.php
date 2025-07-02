@@ -68,10 +68,10 @@
     <main class="main-content">
         <div class="header">
         <h1>Cadastrar membro</h1>
-        <a href="/ProjetoMuseu/template/listaMembro.php" class="btn-add">← Voltar</a>
+        <a href="/ProjetoMuseu/views/membro/listaMembro.php" class="btn-add">← Voltar</a>
         </div>
 
-        <form method="POST" action="/ProjetoMuseu/php/validaMembro.php">
+        <form method="POST" action="/ProjetoMuseu/static/validaMembro.php">
             <input type="hidden" name="id" value="<?= htmlspecialchars($id) ?>">
 
             <?php if (!empty($sucesso)): ?>

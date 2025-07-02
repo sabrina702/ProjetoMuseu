@@ -15,7 +15,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Painel de Monitoras</title>
-  <link rel="stylesheet" href="/ProjetoMuseu/static/css/estiloGerenciaMembro.css"/>
+  <link rel="stylesheet" href="/ProjetoMuseu/static/css/membro.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
@@ -41,7 +41,7 @@
 
         <header class="header">
             <h1>Gerenciamento da Equipe</h1>
-            <a href="/ProjetoMuseu/template/CadastraMembro.php"  style="text-decoration: none" class="btn-add"> + Novo Membro </a>
+            <a href="/ProjetoMuseu/views/membro/cadastraMembro.php"  style="text-decoration: none" class="btn-add"> + Novo Membro </a>
         </header>
     
         <section class="table-section">
@@ -56,24 +56,29 @@
             </tr>
           </thead>
           <tbody>
-            <?php foreach ($membros as $membro): ?>
-              <tr>
-                <td><?= htmlspecialchars($membro['nome']) ?></td>
-                <td><?= htmlspecialchars($membro['email']) ?></td>
-                <td><?= htmlspecialchars($membro['sobre']) ?></td>
-                <td><?= htmlspecialchars($membro['perfil']) ?></td>
-                <td>
-                  <a href="/ProjetoMuseu/template/editaMembro.php?id=<?= $membro['id'] ?>" class="btn-edit">
-                    <i class="bi bi-pencil-square"></i> Editar
-                  </a>
-                  <?php if ($_SESSION['usuario_perfil'] === 'Coordenador(a) do Museu'): ?>
-                    <a href="/ProjetoMuseu/php/excluir_membro.php?id=<?= $membro['id'] ?>" class="btn-delete">
-                      <i class="bi bi-trash"></i> Excluir
-                    </a>
-                  <?php endif; ?>
-                </td>
-              </tr>
-            <?php endforeach; ?>
+          <?php if (!empty($sucesso)): ?>
+            <div class="alert alert-success"><?= htmlspecialchars($sucesso) ?></div>
+          <?php endif; ?>
+          <table>
+            <tbody>
+              <?php if (!empty($membros)): ?>
+                <?php foreach ($membros as $membro): ?>
+                  <tr>
+                    <td><?= htmlspecialchars($membro['nome']) ?></td>
+                    <td><?= htmlspecialchars($membro['email']) ?></td>
+                    <td><?= htmlspecialchars($membro['sobre']) ?></td>
+                    <td><?= htmlspecialchars($membro['perfil']) ?></td>
+                    <td>
+                      <a href="/ProjetoMuseu/controllers/MembroController.php?action=editar&id=<?= $membro['id'] ?>">Editar</a>
+                      <a href="/ProjetoMuseu/controllers/MembroController.php?action=excluir&id=<?= $membro['id'] ?>" onclick="return confirm('Confirma exclusão?')">Excluir</a>
+                    </td>
+                  </tr>
+                <?php endforeach; ?>
+              <?php else: ?>
+                <tr><td colspan="5">Nenhum membro encontrado.</td></tr>
+              <?php endif; ?>
+            </tbody>
+          </table>
           </tbody>
         </table>
       </section>
