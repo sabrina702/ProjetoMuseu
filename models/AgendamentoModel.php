@@ -33,4 +33,10 @@ class AgendamentoModel
             ':id_membro' => null
         ]);
     }
+
+    public function listarTodos() {
+    $stmt = $this->pdo->prepare("SELECT * FROM visitante ORDER BY data_pretendida ASC");
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
 }
