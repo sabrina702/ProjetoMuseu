@@ -71,7 +71,7 @@
         <a href="/ProjetoMuseu/template/listaMembro.php" class="btn-add">← Voltar</a>
         </div>
 
-        <form method="POST" action="/ProjetoMuseu/php/validaMembro.php">
+        <form method="POST" action="/ProjetoMuseu/static/validaMembro.php">
             <input type="hidden" name="id" value="<?= htmlspecialchars($id) ?>">
 
             <?php if (!empty($sucesso)): ?>

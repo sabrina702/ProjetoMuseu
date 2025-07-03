@@ -27,7 +27,7 @@
 
             <div class="footer-center text-md-center mt-4 mt-md-0">
                 <h5>Painel do Administrador</h5>
-                <a  class="text-white" href="/ProjetoMuseu/template/login.php"><i class="bi bi-lock-fill me-2"></i>Área restrita</a>
+                <a class="text-white" href="/ProjetoMuseu/routerAuth.php?page=login"><i class="bi bi-lock-fill me-2"></i>Área restrita</a>
             </div>
         </div>
         <div class="container text-center border-top pt-3 mt-3">

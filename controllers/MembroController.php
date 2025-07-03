@@ -42,7 +42,7 @@ class MembroController
         if (!empty($erros)) {
             $_SESSION['erros'] = $erros;
             $_SESSION['dados'] = $dados;
-            header('Location: /SitedoMuseu/views/addMembro.php');
+            header('Location: /ProjetoMuseu/views/membro/cadastraMembro.php');
             exit();
         }
 
@@ -51,13 +51,13 @@ class MembroController
             $membro->adicionar($dados);
 
             $_SESSION['sucesso'] = 'Membro adicionado com sucesso!';
-            header('Location: /SitedoMuseu/views/gerenciaMembro.php');
+            header('Location: /ProjetoMuseu/views/gerenciaMembro.php');
             exit();
 
         } catch (PDOException $e) {
             $_SESSION['erros']['geral'] = 'Erro ao salvar: ' . $e->getMessage();
             $_SESSION['dados'] = $dados;
-            header('Location: /SitedoMuseu/views/addMembro.php');
+            header('Location: /ProjetoMuseu/views/membro/cadastraMembro.php');
             exit();
         }
     }
