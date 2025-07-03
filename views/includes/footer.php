@@ -12,12 +12,12 @@
         <div class="container py-4 d-flex flex-column flex-md-row justify-content-between">
             <div class="footer-left">
                 <h5>Museu de Ciências Naturais</h5>
-                <p>Rua do Conhecimento, 123<br>Centro – Cidade/Estado<br>Aberto de terça a domingo, 9h às 17h</p>
+                <p> Rod. Machado - Paraguaçu, KM 03 <br>Santo Antonio, Machado - MG</p>
             </div>
         
             <div class="footer-right">
                 <h5>Contato</h5>
-                <p>Email: contato@museuciencias.org<br>Telefone: (00) 1234-5678</p>
+                <p>Email: contato@museuciencias.org<br>Telefone: (35) 1234-5678</p>
                 <div class="social-icons mt-2">
                 <a href="#" class="me-2">Instagram</a>
                 <a href="#" class="me-2">Facebook</a>

@@ -14,9 +14,9 @@ require "includes/header.php";
         <div class="grid-contato">
             <div class="informacoes-contato">
                 <p><strong>Email:</strong> contato@museuciencias.org</p>
-                <p><strong>Telefone:</strong> (00) 1234-5678</p>
+                <p><strong>Telefone:</strong> (35) 1234-5678</p>
                 <p><strong>Instagram:</strong> <a href="https://instagram.com/museuciencias">instagram.com/museuciencias</a></p>
-                <p><strong>Localização:</strong> Rua do Conhecimento, 123 - Centro, Cidade/Estado</p>
+                <p><strong>Localização:</strong>  Rod. Machado - Paraguaçu, KM 03 - Santo Antonio, Machado - MG, 37750-000</p>
             </div>
 
             <div class="mapa-container">
