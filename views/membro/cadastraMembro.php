@@ -54,7 +54,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Painel de Monitoras</title>
   <link rel="stylesheet" href="/ProjetoMuseu/static/css/membro.css"/>
-  <link rel="stylesheet" href="/ProjetoMuseu/static/css/membro.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
@@ -68,10 +67,10 @@
     <main class="main-content">
         <div class="header">
         <h1>Cadastrar membro</h1>
-        <a href="/ProjetoMuseu/template/listaMembro.php" class="btn-add">← Voltar</a>
+        <a href="/ProjetoMuseu/routerMembro.php?action=listar" class="btn-add">← Voltar</a>
         </div>
 
-        <form method="POST" action="/ProjetoMuseu/static/validaMembro.php">
+        <form method="POST" action="/ProjetoMuseu/routerMembro.php?action=salvar">
             <input type="hidden" name="id" value="<?= htmlspecialchars($id) ?>">
 
             <?php if (!empty($sucesso)): ?>
