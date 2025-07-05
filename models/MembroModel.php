@@ -30,6 +30,14 @@ class Membro
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     
+    public function buscarPorEmail($email)
+    {
+        $sql = "SELECT * FROM membro WHERE email = ?";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$email]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
 
     
 }

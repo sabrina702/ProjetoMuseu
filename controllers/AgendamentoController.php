@@ -1,5 +1,4 @@
 <?php
-session_start();
 date_default_timezone_set('America/Sao_Paulo');
 
 require_once __DIR__ . '/../config/conexao.php';
@@ -66,4 +65,10 @@ class AgendamentoController
             echo "Erro: " . $e->getMessage();
         }
     }
+
+    public function consultar() {
+    $agendamentoModel = new AgendamentoModel($this->pdo);
+    $visitas = $agendamentoModel->listarTodos();
+    return $visitas;
+  }
 }
