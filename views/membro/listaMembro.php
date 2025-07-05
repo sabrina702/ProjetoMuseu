@@ -25,9 +25,9 @@
       <img src="/ProjetoMuseu/static/imagens/logo.png" alt="Logo do Museu" class="logo">
       <h2>Museu de Ciências Naturais José Alencar de Carvalho</h2>
       <nav>
-        <a class="active" href="/ProjetoMuseu/template/gerencia.php"  ><i class="bi bi-people-fill"></i>Visão geral</a> 
+        <a class="active" href="/ProjetoMuseu/views/gerenciamento/gerenciamento.php"  ><i class="bi bi-people-fill"></i>Visão geral</a> 
       </nav>
-      <a href="/ProjetoMuseu/template/logout.php" class="logout">
+      <a href="/ProjetoMuseu/routerAuth.php?action=logout" class="logout">
         <i class="bi bi-box-arrow-right"></i> Sair
       </a>     
     </aside>
