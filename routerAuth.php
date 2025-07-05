@@ -1,7 +1,9 @@
 <?php
+session_start();
 require_once __DIR__ . '/config/conexao.php';
 require_once __DIR__ . '/controllers/Autenticacao.php';
 
+$pdo = conectarBD();
 $page = $_GET['page'] ?? 'login';
 
 $autenticacao = new Autenticacao($pdo);
@@ -14,7 +16,6 @@ switch ($page) {
         $autenticacao->logout();
         break;
     case 'gerencia':
-        session_start();
         if (!isset($_SESSION['usuario_id'])) {
             header('Location: /ProjetoMuseu/routerAuth.php?page=login');
             exit;

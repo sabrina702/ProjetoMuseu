@@ -2,7 +2,7 @@
 session_start();
 require_once __DIR__ . '/config/conexao.php';
 require_once __DIR__ . '/controllers/MembroController.php';
-
+$pdo = conectarBD();
 $action = $_GET['action'] ?? 'listar';
 
 $controller = new MembroController($pdo);

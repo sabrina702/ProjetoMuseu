@@ -7,8 +7,9 @@ $action = $_GET['action'] ?? 'consultar';
 $controllerClass = ucfirst($controller) . 'Controller';
 
 require_once __DIR__ . '/../../config/conexao.php';
-require_once __DIR__ . '/../../controllers/' . $controllerClass . '.php';
 
+require_once __DIR__ . '/../../controllers/' . $controllerClass . '.php';
+$pdo = conectarBD();
 $instancia = new $controllerClass($pdo);
 
 // ⚠️ Salva o retorno da action
