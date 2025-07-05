@@ -19,7 +19,7 @@ switch ($page) {
             header('Location: /ProjetoMuseu/routerAuth.php?page=login');
             exit;
         }
-        require __DIR__ . '/views/teste.php';
+        require __DIR__ . '/views/gerenciamento/gerenciamento.php';
         break;
     default:
         echo "Página não encontrada.";
