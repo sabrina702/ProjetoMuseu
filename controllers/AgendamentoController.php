@@ -3,6 +3,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
 require_once __DIR__ . '/../config/conexao.php';
 require_once __DIR__ . '/../models/AgendamentoModel.php';
+$pdo = conectarBD();
 
 class AgendamentoController
 {
